@@ -10,11 +10,18 @@
   <tbody>
     @for (vehiculo of vehiculos; track $index) {
       <tr>
-        <th scope="row">{{ $index + 1 }}</th>
+        <th scope="row" style="width: 20px;">{{ $index + 1 }}</th>
         <td>{{ vehiculo.marca }}</td>
         <td>{{ vehiculo.linea }}</td>
         <td>{{ vehiculo.modelo }}</td>
       </tr>
     }
   </tbody>
+  <div id="contenedor-cantidad-vehiculos" class="mt-3">
+    @for (vehiculo of listadoDeVehiculos; track $index) {
+      <p class="m-0">
+        Total {{ vehiculo.marca }}: {{ vehiculo.cantidad }}
+      </p>
+    }
+  </div>
 </table>
