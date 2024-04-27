@@ -1,1 +1,20 @@
-<p>lista-vehiculos works!</p>
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Marca</th>
+      <th scope="col">Línea</th>
+      <th scope="col">Modelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (vehiculo of vehiculos; track $index) {
+      <tr>
+        <th scope="row">{{ $index + 1 }}</th>
+        <td>{{ vehiculo.marca }}</td>
+        <td>{{ vehiculo.linea }}</td>
+        <td>{{ vehiculo.modelo }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
